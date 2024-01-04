@@ -1,0 +1,44 @@
+.header {
+  max-width: 1200px; /* definindo o tamanho máximo para q meu header n cresça infinitamente */
+  padding: 40px 20px;
+  margin: 0 auto; /* utilizei a margin pra cima e pra baixo de 0 e pro lado e pro outro de auto para centralizar o meu header na tela */
+  display: flex; /* display flex pois quero o meu svg e a lista um do lado do outro */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex; /* display flex pois quero q os itens da minha lista fiquem um do lado do outro */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.header-menu a {
+  font-size: 1.125rem; /* para chegar no meu valor de rem (q vale 16) eu divido o tamanho da tipografia por 16 */
+  line-height: 1.3;
+  text-decoration: none;
+  color: #141414;
+  padding: 10px 20px;
+  display: block; /* colocando o display block pra pegar corretamente o meu valor de padding */
+}
+
+.header-menu a:hover {
+  color: #2d52d5;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+  .header a {
+    background: #f5f5f5;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+  }
+  .header-menu a:hover {
+    border-bottom-color: transparent;
+  }
+}
